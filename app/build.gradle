@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.mrarm.irc.build.settings-builder'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     defaultConfig {
         applicationId "io.mrarm.irc"
         minSdkVersion 17
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 12
         versionName "0.5.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -14,6 +14,7 @@ android {
             useSupportLibrary true
         }
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -36,7 +37,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.documentfile:documentfile:1.0.1'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'com.google.android:flexbox:0.2.7'
     implementation 'com.github.mcmrarm:chatlib:master-SNAPSHOT'
     implementation 'com.github.mcmrarm:chatlib-android-core:master-SNAPSHOT'
